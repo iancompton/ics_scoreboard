@@ -1,0 +1,28 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.1.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = "${groupId}"
+version = "${version}"
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compileOnly 'org.projectlombok:lombok:1.18.4'
+	compileOnly 'org.modelmapper:modelmapper:0.7.7'
+	compile group: 'org.postgresql', name: 'postgresql', version: '9.4.1208'
+
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-jersey'
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

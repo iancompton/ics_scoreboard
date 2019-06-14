@@ -1,0 +1,16 @@
+server.port: 8080
+
+api:
+  version: v1
+
+spring:
+  application.name: ${environment:}scoreboards-${api.version}
+  jersey:
+    application-path: /${api.version}
+  datasource:
+    url: jdbc:postgresql://localhost:5432/scoreboards
+  jpa:
+    properties:
+      hibernate:
+        default_schema: scoreboards
+        jdbc.lob.non_contextual_creation: true
