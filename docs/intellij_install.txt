@@ -1,0 +1,26 @@
+Pre-requisites:
+-  Install git command line tools.
+-  Install postgres DB and ensure it is running.
+-  Run 'docs/database.sql' script in postgres DB.
+-  Create postgres user with full rights to DB schema 'scoreboards'.  Note user/pwd.
+
+Importing:
+-  Create parent directory for importing java project to.
+-  In this git repository click on 'Clone or download' and copy repository url.
+-  On a command line go to directory created in step 1 and enter 'git clone xxx' (where xxx is url copied in step 2)
+-  In 'Intellij' do 'File -> Open'.  Navigate to projects 'build.gradle' file and click 'Open'.  Follow dialogs, when
+   stated do 'Open as project', 'Use auto-import' snd 'Open project as new window'.
+
+Run configuraation:
+-  Once imported and viewing 'ics_scoreboard' project in Intellij select 'Edit Configurations...' in the top tool bar under
+   drop down showing 'Application'.
+-  In run configuration dialog enter:
+    Name = Scoreboards Application
+    Program arguments = --spring.datasource.username=username --spring.datasource.password=password
+        (substitute in DB user/pwd created above)
+        
+Running:
+-  If necessary in 'resources/application.yml' change 'server.port' to required port to run application on.  Can
+   configure in run configuration as well by adding 'Override parameters' and adding 'server.port' parameter.
+-  Run application using tool bar icon to right of drop down in top tool bar.
+-  To test use postman and import collection from 'docs/ics_scoreboards.postman_collection.json'.
