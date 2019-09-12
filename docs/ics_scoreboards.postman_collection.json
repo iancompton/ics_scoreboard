@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "679d28e8-ff5e-4f66-9c11-13b6578e218f",
+		"name": "ics_scoreboards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Scores",
+			"item": [
+				{
+					"name": "Get scores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/v1/scores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"scores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post scores",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/vnd.api+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": null,\n  \"userNo\": 2,\n  \"gameId\": 2,\n  \"timeAdded\": \"2019-05-30 23:30:00.0\",\n  \"score\": 200\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/v1/scores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"scores"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
