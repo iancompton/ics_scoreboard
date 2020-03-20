@@ -11,6 +11,9 @@ Importing:
 -  In 'Intellij' do 'File -> Open'.  Navigate to projects 'build.gradle' file and click 'Open'.  Follow dialogs, when
    stated do 'Open as project', 'Use auto-import' snd 'Open project as new window'.
 
+Lombok:
+-  In intellij preferences for project go to 'Build, Execution, Deployment > Compiler > Annotation Processors' and check 'Enable annotation processing'.  Compiler will error on lombok (@Data) annotations if not done.
+
 Run configuraation:
 -  Once imported and viewing 'ics_scoreboard' project in Intellij select 'Edit Configurations...' in the top tool bar under
    drop down showing 'Application'.
